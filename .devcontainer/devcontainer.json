@@ -1,0 +1,13 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "hostRequirements": {
+        "cpus": 2
+    },
+    "waitFor": "onCreateCommand",
+    "postCreateCommand": "",
+    "postAttachCommand": {
+        "server1": "docker-compose up --build",
+        "server2": "docker ps"
+    }
+
+}
