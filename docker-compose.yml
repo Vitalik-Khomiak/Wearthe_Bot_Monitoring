@@ -1,0 +1,7 @@
+---
+version: '3.10'
+services:
+  art_bot:  
+    build:
+      context: Weather_art_bot/.
+      dockerfile: Dockerfile
