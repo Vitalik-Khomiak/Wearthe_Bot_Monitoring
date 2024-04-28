@@ -5,6 +5,7 @@ import openai
 import logging
 from config import tg_bot_token, open_weather_token, openai_api_key
 
+
 # logs
 FORMAT = '%(asctime)-15s %(name)s %(levelname)s: %(message)s'
 logging.basicConfig(level=logging.INFO, format=FORMAT)
