@@ -1,7 +1,8 @@
 ---
 version: '3.10'
 services:
-  art_bot:  
+  art_bot:
+    image: vitalik136/wearthe_bot_monitoring-art_bot:latest
     build:
       context: Weather_art_bot/.
       dockerfile: Dockerfile
