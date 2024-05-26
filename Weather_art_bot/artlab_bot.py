@@ -20,7 +20,8 @@ try:
     openai.api_key = openai_api_key
 except:
     print(tg_bot_token)
-    while(True)
+    while True:
+        pass
 
 
 # print
