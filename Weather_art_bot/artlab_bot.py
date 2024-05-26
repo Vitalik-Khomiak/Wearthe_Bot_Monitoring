@@ -14,17 +14,17 @@ logging.basicConfig(level=logging.INFO, format=FORMAT)
 logging.basicConfig(level=logging.ERROR, format=FORMAT)
 logger = logging.getLogger()
 
-# try:
+try:
     # Призначаємо змінні для open_weather_token і openai_api_key
     bot = telebot.TeleBot(tg_bot_token)
     openai.api_key = openai_api_key
-    # print(tg_bot_token)
-    # while True:
-    #     continue
-# except:
     print(tg_bot_token)
-    # while True:
-    #     continue
+    while True:
+        continue
+except:
+    print(tg_bot_token)
+    while True:
+        continue
 
 
 # print
