@@ -3,7 +3,7 @@ import datetime
 import telebot
 import openai
 import logging
-import os
+from os import environ
 
 from config import open_weather_token, openai_api_key
 
