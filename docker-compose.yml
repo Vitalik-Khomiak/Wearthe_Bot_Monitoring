@@ -9,6 +9,6 @@ services:
     # env_file:
     #   ./.env
     environment:
-        TG_BOT_TOKEN: ${TG_BOT_TOKEN}
-        OPENAI_API_KEY: ${OPENAI_API_KEY}
-        OPEN_WEATHER_TOKEN: ${OPEN_WEATHER_TOKEN}
+      TG_BOT_TOKEN: ${TG_BOT_TOKEN}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      OPEN_WEATHER_TOKEN: ${OPEN_WEATHER_TOKEN}

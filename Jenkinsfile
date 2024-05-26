@@ -26,10 +26,10 @@ pipeline {
 
         stage('Deploy nginx/custom'){
             steps{
-                sh "docker stop \$(docker ps | grep '$DOCKER_IMAGE' | awk           ''{print \$1}') || true"
+                sh "docker-compose down"
                 sh "docker container prune --force"
                 sh "docker image prune --force"
-                sh "docker-compose up -d"
+                sh "docker-compose up -d-build"
             }
         }
     }   
