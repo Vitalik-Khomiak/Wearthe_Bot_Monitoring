@@ -15,7 +15,7 @@ networks:
 
 services:
 
- jenkins:
+  jenkins:
     image: jenkins_master
     build: 
       context: ./jenkins/
@@ -40,7 +40,7 @@ services:
   prometheus:
     image: docker.io/prom/prometheus:latest
     container_name: prometheus
-    restart: always
+    restart: unless-stopped
     volumes:
       - ./prometheus/:/etc/prometheus/
       - prometheus_data:/prometheus
@@ -57,7 +57,7 @@ services:
   grafana:
     image: docker.io/grafana/grafana-oss:latest
     container_name: grafana
-    restart: always
+    restart: unless-stopped
     depends_on:
       - prometheus
     ports:
@@ -73,7 +73,7 @@ services:
   node_exporter:
     image: quay.io/prometheus/node-exporter:latest
     container_name: node_exporter
-    restart: always
+    restart: unless-stopped
     volumes:
       - /proc:/host/proc:ro
       - /sys:/host/sys:ro
