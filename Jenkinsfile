@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Start') {
             steps {
-                echo 'Cursova_Bot: nginx/custom'
+                echo 'Cursova_Bot: nginx/custom $TG_BOT_TOKEN'
             }
         }
 
