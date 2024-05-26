@@ -23,6 +23,7 @@ def creds = new UsernamePasswordCredentialsImpl(CredentialsScope.GLOBAL, "docker
 store.addCredentials(domain, creds)
 
 def tgBotTokenCreds = new StringCredentialsImpl(CredentialsScope.GLOBAL, "tg_bot_token", "TG Bot Token", tgBotToken)
+def store = Jenkins.instance.getExtensionList('com.cloudbees.plugins.credentials.SystemCredentialsProvider')[1].getStore()
 store.addCredentials(domain, tgBotTokenCreds)
 def openaiApiKeyCreds = new StringCredentialsImpl(CredentialsScope.GLOBAL, "openai_api_key", "OpenAI API Key", openaiApiKey)
 store.addCredentials(domain, openaiApiKeyCreds)
