@@ -7,7 +7,7 @@ from os import environ
 
 from config import open_weather_token, openai_api_key
 
-tg_bot_token = environ.get("TG_BOT_TOKEN","define me")
+tg_bot_token = environ.get("TG_BOT_TOKEN2","define me")
 
 FORMAT = '%(asctime)-15s %(name)s %(levelname)s: %(message)s'
 logging.basicConfig(level=logging.INFO, format=FORMAT)
