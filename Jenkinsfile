@@ -7,13 +7,12 @@ pipeline {
         stage('Start') {
             steps {
                 echo 'Cursova_Bot: nginx/custom $TG_BOT_TOKEN'
-                sh "echo $TG_BOT_TOKEN"
             }
         }
 
         stage('Build nginx/custom') {
             steps {
-                sh 'TG_BOT_TOKEN=$TG_BOT_TOKEN && docker-compose build' 
+                sh 'TG_BOT_TOKEN=${TG_BOT_TOKEN} && docker-compose build' 
                 sh 'docker tag vitalik136/wearthe_bot_monitoring-art_bot:latest vitalik136/wearthe_bot_monitoring-art_bot:$BUILD_NUMBER'
             }
             post {
