@@ -19,8 +19,6 @@ try{
     def xml = new XmlSlurper().parse(telegramConfigFile)
     
     // Читання поточних значень
-    println "Current Bot Token: ${xml.botToken}"
-    println "Current Bot Name: ${xml.botName}"
     if((xml.botToken == newtelegramBotToken) || (xml.botName == newtelegramBotName)){
         println "no change"
     }
@@ -37,8 +35,6 @@ try{
     
     telegramConfigFile.text = writer.toString()
     
-    println "Updated Bot Token: ${newtelegramBotToken}"
-    println "Updated Bot Name: ${newtelegramBotName}"
     
 }catch(FileNotFoundException ex) {
     println "Configuration file not found, creating a new one!"

@@ -1,5 +1,5 @@
 ---
-# version: '3.8'
+version: '3.3'
 services:
   art_bot:
     image: vitalik136/wearthe_bot_monitoring-art_bot:latest
