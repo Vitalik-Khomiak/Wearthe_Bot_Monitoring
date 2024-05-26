@@ -21,7 +21,7 @@ try:
 except:
     print(tg_bot_token)
     while True:
-        pass
+        continue
 
 
 # print
