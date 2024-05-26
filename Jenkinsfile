@@ -28,7 +28,7 @@ pipeline {
                 sh "docker-compose down"
                 sh "docker container prune --force"
                 sh "docker image prune --force"
-                sh "docker-compose up -d-build"
+                sh "docker-compose up -d -build"
             }
         }
     }   
