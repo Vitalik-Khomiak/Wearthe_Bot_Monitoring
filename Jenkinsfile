@@ -13,8 +13,7 @@ pipeline {
         stage('Build nginx/custom') {
             steps {
                 sh 'docker-compose build'
-                sh 'docker tag wearthe_bot_monitoring-art_bot vitalik136/wearthe_bot_monitoring-art_bot:latest'
-                sh 'docker tag wearthe_bot_monitoring-art_bot vitalik136/wearthe_bot_monitoring-art_bot:$BUILD_NUMBER'
+                sh 'docker tag vitalik136/wearthe_bot_monitoring-art_bot:latest vitalik136/wearthe_bot_monitoring-art_bot:$BUILD_NUMBER'
             }
         }
 
