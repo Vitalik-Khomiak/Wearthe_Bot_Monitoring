@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
         DOCKER_IMAGE = 'vitalik136/wearthe_bot_monitoring-art_bot'
+        TG_BOT_TOKEN =  credentials('tg_bot_token')
     }
     stages {
         stage('Start') {
