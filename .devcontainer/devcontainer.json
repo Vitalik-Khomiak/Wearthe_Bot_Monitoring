@@ -6,7 +6,7 @@
     "waitFor": "onCreateCommand",
     "postCreateCommand": "",
     "postAttachCommand": {
-        "server1": "cd Monitoring && docker-compose up --build",
+        "server1": "docker-compose up --build",
         "server2": "docker ps"
     }
 
